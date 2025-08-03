@@ -1,0 +1,22 @@
+camunda.bpm.admin-user:
+  id: camunda
+  password: camunda
+
+  springdoc:
+    api-docs:
+      path: /api-docs # Custom path for the API docs (optional)
+    swagger-ui:
+      path: /swagger-ui.html # Custom path for the Swagger UI (optional)
+    info:
+      title: My Camunda Workflow API
+      description: REST API for managing Camunda processes and tasks.
+      version: 1.0.0
+      contact:
+        name: John Doe
+        email: john.doe@example.com
+        url: http://www.example.com
+    # Configure which packages to scan for REST controllers
+    # This is the key to fixing the "No operations defined in spec!" error
+    packagesToScan:
+      - com.camunda.workflow.controller  # Your custom controllers
+      - org.camunda.bpm.engine.rest       # Camunda's built-in REST API
