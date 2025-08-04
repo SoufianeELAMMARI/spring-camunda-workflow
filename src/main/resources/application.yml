@@ -1,3 +1,12 @@
-camunda.bpm.admin-user:
-  id: camunda
-  password: camunda
+camunda:
+  bpm:
+    admin-user:
+      id: camunda
+      password: camunda
+
+    history-level: full
+
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: create
